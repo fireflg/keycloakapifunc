@@ -11,7 +11,6 @@ def get_token():
     params = dict(client_id='admin-cli', grant_type='password', username='', password='')
     x = requests.post(url, params, verify=False).content.decode('utf-8')
     return ast.literal_eval(x)['access_token']
-    # return requests.post(url, params, verify=False).content.decode('utf-8')
 
 
 def create_client():
