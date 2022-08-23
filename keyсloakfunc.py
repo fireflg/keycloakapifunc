@@ -14,7 +14,7 @@ def get_token():
 
 
 def create_client():
-    url = 'https://YOUR_URL/auth/admin/realms/botkin/users'
+    url = 'https://YOUR_URL/auth/admin/realms/xxx/users'
 
     headers = {
         'content-type': 'application/json',
@@ -32,7 +32,7 @@ def create_client():
 
 
 def groups_list():
-    url = 'https://YOUR_URL/auth/admin/realms/botkin/groups/'
+    url = 'https://YOUR_URL/auth/admin/realms/xxx/groups/'
     headers = {
         'content-type': 'application/json',
         'Authorization': 'Bearer ' + str(get_token())
@@ -43,7 +43,7 @@ def groups_list():
 
 
 def group_list():
-    url = 'https://YOUR_URLi/auth/admin/realms/botkin/groups/'
+    url = 'https://YOUR_URLi/auth/admin/realms/xxx/groups/'
     group_name = input("Введите имя группы:")
     headers = {
         'content-type': 'application/json',
@@ -59,7 +59,7 @@ def group_list():
 
 
 def users_id():
-    url = f'https://YOUR_URL/auth/admin/realms/botkin/users'
+    url = f'https://YOUR_URL/auth/admin/realms/xxx/users'
     username = input("Введите имя пользователя:")
     headers = {
         'content-type': 'application/json',
@@ -75,7 +75,7 @@ def users_id():
 
 
 def all_users_id():
-    url = f'https://YOUR_URL/auth/admin/realms/botkin/users'
+    url = f'https://YOUR_URL/auth/admin/realms/xxx/users'
     headers = {
         'content-type': 'application/json',
         'Authorization': 'Bearer ' + str(get_token())
@@ -90,7 +90,7 @@ def add_group_to_user():
     errors = []
     userId = input("Id пользователя:")
     groupId = input("Id группы:")
-    url = f'https://YOUR_URL/auth/admin/realms/botkin/users/{userId}/groups/{groupId}'
+    url = f'https://YOUR_URL/auth/admin/realms/xxx/users/{userId}/groups/{groupId}'
     headers = {
         'content-type': 'application/json',
         'Authorization': 'Bearer ' + str(get_token())
@@ -107,7 +107,7 @@ def add_group_to_user():
 
 def user_groups():
     userId = input("Id пользователя:")
-    url = f'https://YOUR_URL/auth/admin/realms/botkin/users/{userId}/groups/'
+    url = f'https://YOUR_URL/auth/admin/realms/xxx/users/{userId}/groups/'
     headers = {
         'content-type': 'application/json',
         'Authorization': 'Bearer ' + str(get_token())
@@ -118,7 +118,7 @@ def user_groups():
 
 def del_user():
     userId = input("Id пользователя:")
-    url = f'https://YOUR_URL/auth/admin/realms/botkin/users/{userId}'
+    url = f'https://YOUR_URL/auth/admin/realms/xxx/users/{userId}'
     headers = {
         'content-type': 'application/json',
         'Authorization': 'Bearer ' + str(get_token())
@@ -129,7 +129,7 @@ def del_user():
 def del_user_from_group():
     groupId = input("Id группы:")
     userId = input("Id пользователя:")
-    url = f'https:/YOUR_URL/auth/admin/realms/botkin/users/{userId}/groups/{groupId}'
+    url = f'https:/YOUR_URL/auth/admin/realms/xxx/users/{userId}/groups/{groupId}'
     headers = {
         'content-type': 'application/json',
         'Authorization': 'Bearer ' + str(get_token())
